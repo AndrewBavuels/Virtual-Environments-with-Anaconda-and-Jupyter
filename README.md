@@ -1,9 +1,3 @@
-#### (Work in progress from local to GitHub)
-
-(A commit test from GitHub)
-
-(Another update)
-
 # Virtual Environments with Anaconda and Jupyter
 
 ## Create virtual environments from scratch
