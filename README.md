@@ -50,5 +50,7 @@ Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.
 In data science and machine learning projects when you need libraries like TensorFlow or PyTorch, to simplify your specific configuration and versions.
 
 [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
-```sh
-Creating virtual environments with Anaconda
+
+### Creating virtual environments with Anaconda
+
+#### (Work in progress from local to GitHub)
