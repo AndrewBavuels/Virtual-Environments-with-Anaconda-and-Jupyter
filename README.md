@@ -1,5 +1,3 @@
-
-
 # Virtual Environments with Anaconda and Jupyter
 
 ## Create virtual environments from scratch
