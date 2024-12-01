@@ -4,6 +4,8 @@
 
 (Another update)
 
+## (Changes from my local branch named developer_01)
+
 # Virtual Environments with Anaconda and Jupyter
 
 ## Create virtual environments from scratch
