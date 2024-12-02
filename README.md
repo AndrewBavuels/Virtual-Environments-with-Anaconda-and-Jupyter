@@ -16,7 +16,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ source pilot_env/bin/activate
 
 (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$
 ```
-
+hjfhdjhjdh
 ## Deactivate the virtual environment
 
 ```sh
