@@ -13,10 +13,10 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ python3 -m venv pilot_env
 
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ source pilot_env/bin/activate
-
+fff
 (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$
 ```
-hjfhdjhjdh
+
 ## Deactivate the virtual environment
 
 ```sh
