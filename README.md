@@ -46,6 +46,13 @@ Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.
 ```sh (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$ python3 Python 3.10.12 (main, Sep 11 2024, 15:47:36) [GCC 11.4.0] on linux Type "help", "copyright", "credits" or "license" for more information.
 >>> import pandas >>> import matplotlib >>> exit() (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$ deactivate andrewbavuels@the-Legionnaire:~/virtual_envs$ import pandas -bash: import: command not found 
 ``` 
+## Wrap up:
+
+- `python3 -m venv <env_name>`: Creates a virtual environment.
+- `source <env_name>/bin/activate`: Activates the virtual environment.
+- `deactivate`: Deactivates the virtual environment.
+- `rm -rf <env_name>`: Removes the virtual environment.
+- `pip install <package_name>`: Installs packages in the virtual environment.
 
 ## 2. When to use Anaconda?
 
@@ -216,3 +223,64 @@ wheel                     0.44.0          py313h06a4308_0
 xz                        5.4.6                h5eee18b_1
 zlib                      1.2.13               h5eee18b_1
 ```
+### Removing libraries and packages installed in env "example"
+
+- First, you need to be in the corresponding env (in this case, "example" env):
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda remove pandas numpy
+```
+
+### Clean cache of packages we are not using anymore
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda clean --packages
+Will remove 57 (331.7 MB) package(s).
+Proceed ([y]/n)?```
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda clean --all
+Will remove 882 (2.16 GB) tarball(s).
+Proceed ([y]/n)?
+```
+### Removing environments
+
+- Deactivate the current environment (if active):
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda deactivate
+```
+- List all environments:
+
+```sh
+andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda env list
+
+base                   /home/andrewbavuels/anaconda3
+example                /home/andrewbavuels/anaconda3/envs/example
+example_2              /home/andrewbavuels/anaconda3/envs/example_2
+jupyter                /home/andrewbavuels/anaconda3/envs/jupyter
+keras_env              /home/andrewbavuels/anaconda3/envs/keras_env
+pandas_numpy_env       /home/andrewbavuels/anaconda3/envs/pandas_numpy_env
+pentaho_env            /home/andrewbavuels/anaconda3/envs/pentaho_env
+```
+- Remove the specified environments:
+
+```sh
+andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda remove --name example example_2 pentaho_env --all
+```
+
+## Wrap up:
+
+- `conda create --name <env_name>`: Creates a virtual environment with Anaconda.
+- `conda activate <env_name>`: Activates the Anaconda environment.
+- `conda deactivate`: Deactivates the Anaconda environment.
+- `conda create --name <env_name> python=<version>`: Creates an environment with a specific Python version.
+- `conda env list`: Lists all environments created by Anaconda.
+- `conda install <package_name>`: Installs packages in an Anaconda environment.
+- `conda list -n <env_name>`: Lists installed packages in a specific Anaconda environment.
+- `conda remove <package_name>`: Removes specific packages from an environment.
+- `conda clean --packages`: Cleans up unused package caches.
+- `conda clean --all`: Cleans all unnecessary files, including tarballs.
+- `conda remove --name <env_name> --all`: Removes an Anaconda environment completely.
+
+# Coming up next (conda update)...
