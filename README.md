@@ -266,23 +266,6 @@ pentaho_env            /home/andrewbavuels/anaconda3/envs/pentaho_env
 ```sh
 andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda remove --name example_2 --all
 ```
-
-## Wrap up:
-
-- `conda create --name <env_name>`: Creates a virtual environment with Anaconda.
-- `conda activate <env_name>`: Activates the Anaconda environment.
-- `conda deactivate`: Deactivates the Anaconda environment.
-- `conda create --name <env_name> python=<version>`: Creates an environment with a specific Python version.
-- `conda env list`: Lists all environments created by Anaconda.
-- `conda install <package_name>`: Installs packages in an Anaconda environment.
-- `conda list -n <env_name>`: Lists installed packages in a specific Anaconda environment.
-- `conda remove <package_name>`: Removes specific packages from an environment.
-- `conda clean --packages`: Cleans up unused package caches.
-- `conda clean --all`: Cleans all unnecessary files, including tarballs.
-- `conda remove --name <env_name> --all`: Removes an Anaconda environment completely.
-
-# Coming up next (conda update)...
-
 ### Updating an specific installed package
 
 ```sh
@@ -379,7 +362,25 @@ prefix: /home/andrewbavuels/anaconda3/envs/example
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ conda env create -f environment.yml
 ```
+# Coming up next ...
 
+## Wrap up:
 
+- `conda create --name <env_name>`: Creates a virtual environment with Anaconda.
+- `conda activate <env_name>`: Activates the Anaconda environment.
+- `conda deactivate`: Deactivates the Anaconda environment.
+- `conda create --name <env_name> python=<version>`: Creates an environment with a specific Python version.
+- `conda env list`: Lists all environments created by Anaconda.
+- `conda install <package_name>`: Installs packages in an Anaconda environment.
+- `conda list -n <env_name>`: Lists installed packages in a specific Anaconda environment.
+- `conda remove <package_name>`: Removes specific packages from an environment.
+- `conda clean --packages`: Cleans up unused package caches.
+- `conda clean --all`: Cleans all unnecessary files, including tarballs.
+- `conda remove --name <env_name> --all`: Removes an Anaconda environment completely.
+- `conda update <package_name>`: Updates a specific package in an environment.
+- `conda update --all`: Updates all packages in an environment to their latest versions.
+- `conda env export > environment.yml`: Exports an environment's dependencies to a YAML file.
+- `conda env create -f environment.yml`: Creates an environment from an exported YAML file.
 
+## 3. Jupyter Notebook from Anaconda
 
