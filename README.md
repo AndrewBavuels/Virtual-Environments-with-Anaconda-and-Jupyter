@@ -54,13 +54,11 @@ Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.
 - `rm -rf <env_name>`: Removes the virtual environment.
 - `pip install <package_name>`: Installs packages in the virtual environment.
 
-## 2. When to use Anaconda?
-
-In data science and machine learning projects when you need libraries like TensorFlow or PyTorch, to simplify your specific configuration and versions.
-
 [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
-### Creating virtual environments with Anaconda
+## 2. Creating virtual environments with Anaconda
+
+**When to use Anaconda?** In data science and machine learning projects when you need libraries like TensorFlow or PyTorch, to simplify your specific configuration and versions.
 
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ conda create --name example
@@ -266,7 +264,7 @@ pentaho_env            /home/andrewbavuels/anaconda3/envs/pentaho_env
 - Remove the specified environments:
 
 ```sh
-andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda remove --name example example_2 pentaho_env --all
+andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda remove --name example_2 --all
 ```
 
 ## Wrap up:
@@ -284,3 +282,104 @@ andrewbavuels@the-Legionnaire:~/git_github/RECYCLE$ conda remove --name example 
 - `conda remove --name <env_name> --all`: Removes an Anaconda environment completely.
 
 # Coming up next (conda update)...
+
+### Updating an specific installed package
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ conda update numpy
+```
+### Updating all installed package
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ conda update --all
+```
+### Cloning virtual envs 
+
+**Good practice:** Test changes in development environments before applying them in production environments
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ conda deactivate
+andrewbavuels@the-Legionnaire:~/virtual_envs$ conda create --name example_3 --clone example
+```
+
+### Export environment in a file
+
+- Activate example env:
+
+```sh
+andrewbavuels@the-Legionnaire:~/virtual_envs$ conda activate example
+```
+
+- Export environment in a `.yml` file:
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ conda env export > environment.yml
+```
+
+- Checking the `.yml` file just created:
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ ls
+'For gifs.mp4'   README.md   conda-cheatsheet.pdf   environment.yml   imgs
+```
+
+- Checking the env exported and its dependencies:
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ cat environment.yml
+name: example
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - blas=1.0=mkl
+  - bottleneck=1.4.2=py313hf0014fa_0
+  - bzip2=1.0.8=h5eee18b_6
+  - ca-certificates=2024.11.26=h06a4308_0
+  - expat=2.6.3=h6a678d5_0
+  - intel-openmp=2023.1.0=hdb19cb5_46306
+  - ld_impl_linux-64=2.40=h12ee557_0
+  - libffi=3.4.4=h6a678d5_1
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libmpdec=4.0.0=h5eee18b_0
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - libuuid=1.41.5=h5eee18b_0
+  - mkl=2023.1.0=h213fc3f_46344
+  - mkl-service=2.4.0=py313h5eee18b_1
+  - mkl_fft=1.3.11=py313h5eee18b_0
+  - mkl_random=1.2.8=py313h06d7b56_0
+  - ncurses=6.4=h6a678d5_0
+  - numexpr=2.10.1=py313h3c60e43_0
+  - numpy=2.1.3=py313hf4aebb8_0
+  - numpy-base=2.1.3=py313h3fc9231_0
+  - openssl=3.0.15=h5eee18b_0
+  - pandas=2.2.3=py313h6a678d5_0
+  - pip=24.2=py313h06a4308_0
+  - python=3.13.0=hf623796_100_cp313
+  - python-dateutil=2.9.0post0=py313h06a4308_2
+  - python-tzdata=2023.3=pyhd3eb1b0_0
+  - python_abi=3.13=0_cp313
+  - pytz=2024.1=py313h06a4308_0
+  - readline=8.2=h5eee18b_0
+  - setuptools=72.1.0=py313h06a4308_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.45.3=h5eee18b_0
+  - tbb=2021.8.0=hdb19cb5_0
+  - tk=8.6.14=h39e8969_0
+  - tzdata=2024b=h04d1e81_0
+  - wheel=0.44.0=py313h06a4308_0
+  - xz=5.4.6=h5eee18b_1
+  - zlib=1.2.13=h5eee18b_1
+prefix: /home/andrewbavuels/anaconda3/envs/example
+```
+### Replicating the exported environment in another computer
+
+```sh
+andrewbavuels@the-Legionnaire:~/virtual_envs$ conda env create -f environment.yml
+```
+
+
+
+
