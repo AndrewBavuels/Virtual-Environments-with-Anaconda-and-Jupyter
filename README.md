@@ -1,6 +1,6 @@
 # Virtual Environments with Anaconda and Jupyter
 
-## Create virtual environments from scratch
+## 1. Create virtual environments from scratch
  ```sh
 
 andrewbavuels@the-Legionnaire:~/virtual_envs$ pwd
@@ -9,7 +9,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ pwd
 andrewbavuels@the-Legionnaire:~/virtual_envs$ python3 -m venv pilot_env
  ```
 
-## Activate the virtual environment
+### Activate the virtual environment
 
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ source pilot_env/bin/activate
@@ -17,7 +17,7 @@ fff
 (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$
 ```
 
-## Deactivate the virtual environment
+### Deactivate the virtual environment
 
 ```sh
 (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$ deactivate
@@ -25,12 +25,12 @@ fff
 andrewbavuels@the-Legionnaire:~/virtual_envs$
 ```
 
-## Remove virtual environments
+### Remove virtual environments
 
 ```sh
 rm -rf pilot_env
 ```
-## Install packages or libraries in your virtual environment
+### Install packages or libraries in your virtual environment
 
 ```sh
 (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$ pip install pandas matplotlib
@@ -45,7 +45,7 @@ Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.
 >>> import pandas >>> import matplotlib >>> exit() (pilot_env) andrewbavuels@the-Legionnaire:~/virtual_envs$ deactivate andrewbavuels@the-Legionnaire:~/virtual_envs$ import pandas -bash: import: command not found 
 ``` 
 
-## When to use Anaconda?
+## 2. When to use Anaconda?
 
 In data science and machine learning projects when you need libraries like TensorFlow or PyTorch, to simplify your specific configuration and versions.
 
