@@ -406,6 +406,6 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ conda activate jupyter
 ```
 ![jupyter](https://github.com/user-attachments/assets/dd585a98-7fe4-4ad3-a8ca-abc9273038d5)
 
-
+### Coming up next: Magic Commands
 
 
