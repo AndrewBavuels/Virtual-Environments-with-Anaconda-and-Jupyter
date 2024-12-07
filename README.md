@@ -362,8 +362,6 @@ prefix: /home/andrewbavuels/anaconda3/envs/example
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ conda env create -f environment.yml
 ```
-# Coming up next ...
-
 ## Wrap up:
 
 - `conda create --name <env_name>`: Creates a virtual environment with Anaconda.
@@ -383,4 +381,31 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ conda env create -f environment.ym
 - `conda env create -f environment.yml`: Creates an environment from an exported YAML file.
 
 ## 3. Jupyter Notebook from Anaconda
+
+In order to save you time, you can find the `.yml` file for my Jupyter environment. This includes already Jupyter Notebooks.
+
+```sh
+andrewbavuels@the-Legionnaire:~/virtual_envs$ conda env create -f jupyter.yml
+```
+_"In my personal opinion, I like my Notebook interface. It is friendly for anyone's view."_
+
+You can follow the previous steps when creating a environment for Jupyter one (checking its dependencies, for example).
+
+Let's move on:
+
+- Activating the Jupyter environment:
+
+```sh
+andrewbavuels@the-Legionnaire:~/virtual_envs$ conda activate jupyter
+```
+
+- Launching Jupyter Notebook
+
+```sh
+(jupyter) andrewbavuels@the-Legionnaire:~/virtual_envs$ jupyter notebook
+```
+![jupyter](https://github.com/user-attachments/assets/dd585a98-7fe4-4ad3-a8ca-abc9273038d5)
+
+
+
 
