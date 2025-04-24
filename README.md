@@ -132,6 +132,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ conda activate example
 
 (example) andrewbavuels@the-Legionnaire:~/virtual_envs$ conda install numpy pandas
 ```
+
 **How to check if we have the packages in the virtual environment?**
 
 ```sh
@@ -139,6 +140,18 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import numpy as np
 >>> import pandas as pd
 >>>
+```
+
+### Integrating the Python Kernel into Jupyter Notebook
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ conda install ipykernel
+```
+
+### Registering a Virtual Environment in Jupyter Notebook
+
+```sh
+(example) andrewbavuels@the-Legionnaire:~/virtual_envs$ python -m ipykernel install --user --name example --display-name "example"
 ```
 
 ### Checking libraries and packages installed in env "example"
